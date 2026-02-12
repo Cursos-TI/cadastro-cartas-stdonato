@@ -14,7 +14,9 @@ int main() {
   float pib_cidade;        // PIB da cidade
   int pontos_turisticos;   // Numero de pontos turisticos da cidade
 
-  // Área para entrada de dados
+  // Código para dados da primeira carta
+
+  // Área para entrada de dados - Carta 1
   printf("Cadastro de Cartas - Super Trunfo C \n\n");
   printf("Carta 1: \n");
 
@@ -39,7 +41,7 @@ int main() {
   printf("Número de pontos turísticos: ");
   scanf("%d", &pontos_turisticos);
 
-  // Área para exibição dos dados da cidade
+  // Área para exibição dos dados da cidade - Carta 1
   printf("\nCarta 1: \n\n");
   printf("Estado: %c \n", estado);
   printf("Código: %s \n", codigo_carta);
@@ -50,7 +52,8 @@ int main() {
   printf("Número de Pontos Turísticos: %d \n\n", pontos_turisticos);
 
 
-  // Área para entrada de dados
+  // Código para dados da segunda carta
+  // Área para entrada de dados - Carta 2
   printf("Cadastro de Cartas - Super Trunfo C \n\n");
   printf("Carta 2: \n");
 
@@ -75,7 +78,7 @@ int main() {
   printf("Número de pontos turísticos: ");
   scanf("%d", &pontos_turisticos);
 
-  // Área para exibição dos dados da cidade
+  // Área para exibição dos dados da cidade - Carta 2
   printf("\nCarta 2: \n\n");
   printf("Estado: %c \n", estado);
   printf("Código: %s \n", codigo_carta);
@@ -84,7 +87,6 @@ int main() {
   printf("Área: %.2f km2 \n", area_cidade);
   printf("PIB: %.2f bilhões de reais \n", pib_cidade);
   printf("Número de Pontos Turísticos: %d \n", pontos_turisticos);
-
 
 return 0;
 } 
