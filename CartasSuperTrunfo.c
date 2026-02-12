@@ -18,25 +18,25 @@ int main() {
   printf("Cadastro de Cartas - Super Trunfo C \n\n");
   printf("Carta 1: \n");
 
-  printf("Informe o Estado (1 letra de A a H): \n");
+  printf("Informe o Estado (1 letra de A a H): ");
   scanf("%c", &estado);
 
-  printf("Código da carta (letra + número de 01 a 04): \n");
+  printf("Código da carta (1 letra + número de 01 a 04): ");
   scanf("%s", codigo_carta);
 
-  printf("Nome da Cidade (sem espaços): \n");
+  printf("Nome da Cidade (sem espaços): ");
   scanf("%s", nome_cidade);
 
-  printf("População da Cidade: \n");
+  printf("População da Cidade: ");
   scanf("%d", &populacao);
 
-  printf("Área da Cidade (em km quadrados): \n");
+  printf("Área da Cidade (em km quadrados): ");
   scanf("%f", &area_cidade);
 
-  printf("PIB da Cidade: \n");
+  printf("PIB da Cidade (em bilhões de reais): ");
   scanf("%f", &pib_cidade);
 
-  printf("Número de pontos turísticos: \n");
+  printf("Número de pontos turísticos: ");
   scanf("%d", &pontos_turisticos);
 
   // Área para exibição dos dados da cidade
