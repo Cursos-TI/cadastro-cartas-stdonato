@@ -3,6 +3,7 @@
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das cartas
 // Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
+// Stevenes Donato - Curso ADS - 2026.1
 
 int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
@@ -15,7 +16,6 @@ int main() {
   int pontos_turisticos, pontos_turisticos2;   // Numero de pontos turisticos da cidade
 
   // Código para dados da primeira carta
-
   // Área para entrada de dados - Carta 1
   printf("Cadastro de Cartas - Super Trunfo C \n\n");
   printf("Carta 1: \n");
@@ -41,7 +41,7 @@ int main() {
   printf("Número de pontos turísticos: ");
   scanf("%d", &pontos_turisticos);
 
-  
+  // Código para dados da segunda carta
   // Área para entrada de dados - Carta 2
   printf("Cadastro de Cartas - Super Trunfo C \n\n");
   printf("Carta 2: \n");
