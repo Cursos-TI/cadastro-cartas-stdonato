@@ -14,8 +14,9 @@ int main() {
   float area_cidade, area_cidade2;           // Area da cidade em quilometros quadrados
   float pib_cidade, pib_cidade2;             // PIB da cidade
   int pontos_turisticos, pontos_turisticos2; // Numero de pontos turisticos da cidade
-  float densidade, densidade2;              // Densidade populacional
-  float pib_pc, pib_pc2;                          // PIB per capita da cidade
+  float densidade, densidade2;               // Densidade populacional
+  float pib_pc, pib_pc2;                     // PIB per capita da cidade
+  float superpoder;
 
   // Código para dados da primeira carta
   // Área para entrada de dados - Carta 1
