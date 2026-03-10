@@ -16,7 +16,16 @@ int main() {
   int pontos_turisticos, pontos_turisticos2; // Numero de pontos turisticos da cidade
   float densidade, densidade2;               // Densidade populacional
   float pib_pc, pib_pc2;                     // PIB per capita da cidade
-  float superpoder;
+  
+  // Resultados das comparações
+  int resultado_populacao;                   // Resultado população
+  int resultado_area;                        // Resultado Àrea da cidade
+  int resultado_pib;                         // Resultado PIB
+  int resultado_pontos_turisticos;           // Resultado pontos turisticos
+  int resultado_densidade;                   // Resultado densidade populacional
+  int resultado_pib_pc;                      // Resultado PIB per capita
+  float super_poder, super_poder2;           // Soma dos atributos numéricos
+  float resultado_super_poder;               // Resultado super poder
 
   // Código para dados da primeira carta
   // Área para entrada de dados - Carta 1
@@ -104,5 +113,35 @@ int main() {
   printf("Densidade populacional: %.2f hab/km2 \n", densidade2);
   printf("PIB per capita: %.2f reais \n\n", pib_pc2);
 
+  // Resultados das comparações
+  printf("\nComparação de Cartas: \n\n");  
+  printf("Se 1 - Carta 1 venceu \n");
+  printf("Se 0 - Carta 2 venceu. \n\n");
+  
+  resultado_populacao = populacao > populacao2;
+  printf("População: (%d) \n", resultado_populacao);
+  
+  resultado_area = area_cidade > area_cidade2;
+  printf("Àrea: (%d) \n", resultado_area);
+
+  resultado_pib = pib_cidade > pib_cidade2;
+  printf("PIB: (%d) \n", resultado_pib);
+
+  resultado_pontos_turisticos = pontos_turisticos > pontos_turisticos2;
+  printf("Pontos turíticos: (%d) \n", resultado_pontos_turisticos);
+
+  resultado_densidade = densidade < densidade2;          // Menor densidade vence
+  printf("Densidade populacional: (%d) \n", resultado_densidade);
+
+  resultado_pib_pc = pib_pc > pib_pc2;
+  printf("PIB per capita: (%d) \n", resultado_pib_pc);
+
+  //Calculo do super poder
+  super_poder = ((float)populacao + area_cidade + pib_cidade + (float)pontos_turisticos + pib_pc) + 1/densidade;
+  super_poder2 = ((float)populacao2 + area_cidade2 + pib_cidade2 + (float)pontos_turisticos2 + pib_pc2) + 1/densidade2;
+
+  resultado_super_poder = super_poder > super_poder2;
+  printf("Super Poder: (%.0f) \n", resultado_super_poder);
+   
 return 0;
 } 
