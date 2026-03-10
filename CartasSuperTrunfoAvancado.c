@@ -18,14 +18,10 @@ int main() {
   float pib_pc, pib_pc2;                     // PIB per capita da cidade
   
   // Resultados das comparações
-  int resultado_populacao;                   // Resultado população
-  int resultado_area;                        // Resultado Àrea da cidade
-  int resultado_pib;                         // Resultado PIB
-  int resultado_pontos_turisticos;           // Resultado pontos turisticos
-  int resultado_densidade;                   // Resultado densidade populacional
-  int resultado_pib_pc;                      // Resultado PIB per capita
   float super_poder, super_poder2;           // Soma dos atributos numéricos
   float resultado_super_poder;               // Resultado super poder
+  char vencedor1[25] = "Carta 1 venceu"; 
+  char vencedor2[25] = "Carta 2 venceu";
 
   // Código para dados da primeira carta
   // Área para entrada de dados - Carta 1
@@ -114,34 +110,27 @@ int main() {
   printf("PIB per capita: %.2f reais \n\n", pib_pc2);
 
   // Resultados das comparações
-  printf("\nComparação de Cartas: \n\n");  
-  printf("Se 1 - Carta 1 venceu \n");
-  printf("Se 0 - Carta 2 venceu. \n\n");
+  printf("\n === Comparação de Cartas === \n\n");  
+
+  // Comparar os valores e exibe a variavel vencedor1 para 1 ou vencedor2 para 0
+  printf("População: %s (%d)\n", (populacao > populacao2) ? vencedor1 : vencedor2, populacao > populacao2);
+   
+  printf("Área: %s (%d)\n", (area_cidade > area_cidade2) ? vencedor1 : vencedor2, area_cidade > area_cidade2);
   
-  resultado_populacao = populacao > populacao2;
-  printf("População: (%d) \n", resultado_populacao);
+  printf("PIB: %s (%d)\n", (pib_cidade > pib_cidade2) ? vencedor1 : vencedor2, pib_cidade > pib_cidade2);
   
-  resultado_area = area_cidade > area_cidade2;
-  printf("Àrea: (%d) \n", resultado_area);
+  printf("Pontos turíticos: %s (%d)\n", (pontos_turisticos > pontos_turisticos2) ? vencedor1 : vencedor2, pontos_turisticos > pontos_turisticos2);
 
-  resultado_pib = pib_cidade > pib_cidade2;
-  printf("PIB: (%d) \n", resultado_pib);
-
-  resultado_pontos_turisticos = pontos_turisticos > pontos_turisticos2;
-  printf("Pontos turíticos: (%d) \n", resultado_pontos_turisticos);
-
-  resultado_densidade = densidade < densidade2;          // Menor densidade vence
-  printf("Densidade populacional: (%d) \n", resultado_densidade);
-
-  resultado_pib_pc = pib_pc > pib_pc2;
-  printf("PIB per capita: (%d) \n", resultado_pib_pc);
+  // Menor densidade vence
+  printf("Densidade populacional: %s (%d)\n", (densidade < densidade2) ? vencedor1 : vencedor2, densidade < densidade2);
+  
+  printf("PIB per capita: %s (%d)\n", (pib_pc > pib_pc2) ? vencedor1 : vencedor2, pib_pc > pib_pc2);
 
   //Calculo do super poder
-  super_poder = ((float)populacao + area_cidade + pib_cidade + (float)pontos_turisticos + pib_pc) + 1/densidade;
-  super_poder2 = ((float)populacao2 + area_cidade2 + pib_cidade2 + (float)pontos_turisticos2 + pib_pc2) + 1/densidade2;
-
-  resultado_super_poder = super_poder > super_poder2;
-  printf("Super Poder: (%.0f) \n", resultado_super_poder);
+  super_poder = ((float)populacao + area_cidade + pib_cidade + (float)pontos_turisticos + pib_pc) + 1.0/densidade;
+  super_poder2 = ((float)populacao2 + area_cidade2 + pib_cidade2 + (float)pontos_turisticos2 + pib_pc2) + 1.0/densidade2;
+  
+  printf("Super Poder: %s (%d)\n", (super_poder > super_poder2) ? vencedor1 : vencedor2, super_poder > super_poder2);
    
 return 0;
 } 
