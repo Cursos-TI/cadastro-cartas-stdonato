@@ -112,10 +112,6 @@ int main() {
   // Resultados das comparações
   printf("\nComparação de cartas (Atributo: População): \n\n");  
 
-  //Carta 1 - São Paulo (SP): 12.300.000
-  //Carta 2 - Rio de Janeiro (RJ): 6.000.000
-  //Resultado: Carta 1 (São Paulo) venceu!
-
   // Exibe as populacoes
   printf("Carta 1 - %s (%s): %d \n", nome_cidade, estado, populacao);
   printf("Carta 2 - %s (%s): %d \n", nome_cidade2, estado2, populacao2);
